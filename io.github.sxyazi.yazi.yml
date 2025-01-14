@@ -250,7 +250,7 @@ modules:
       # The icon specified in the upstream dot desktop file does not play nicely with Flatpak.
       - desktop-file-edit assets/yazi.desktop --set-key=Icon --set-value="${FLATPAK_ID}"
       # Run the script to disable nerd fonts before launching Yazi.
-      - desktop-file-edit assets/yazi.desktop --set-key=Exec --set-value="yazi-wrapper.sh"
+      - desktop-file-edit assets/yazi.desktop --set-key=Exec --set-value="yazi-wrapper.sh %u"
       - install -Dm00644 theme-no-nerd-fonts.toml ${FLATPAK_DEST}/share/theme-no-nerd-fonts.toml
       - install -Dm00744 yazi-wrapper.sh ${FLATPAK_DEST}/bin/yazi-wrapper.sh
       - install -Dm00644 assets/yazi.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
