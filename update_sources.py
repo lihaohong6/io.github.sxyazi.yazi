@@ -90,10 +90,16 @@ def golang_main():
         subprocess.run(["flatpak-go-mod", clone_dir])
         shutil.rmtree(clone_dir)
 
-        # First file produced by flatpak-go-mod: yml file containing all the dependencies. Need to move it.
-        Path("go.mod.yml").rename(library_path / "sources.yml")
+        # flatpak-go-mod defaults to using modules.txt. Need to specify the subdirectory instead.
+        yml_path = Path("go.mod.yml")
+        with open(yml_path, "r+") as f:
+            content = f.read().replace("path: modules.txt", f"path: modules/{library_name}/modules.txt")
+            f.seek(0)
+            f.write(content)
+            f.truncate()
 
-        # Second file produced by flatpak-go-mod: modules.txt file. Just need t
+        # Move to subdirectories to avoid overcrowding the base directory
+        yml_path.rename(library_path / "sources.yml")
         Path("modules.txt").rename(library_path / "modules.txt")
 
 
