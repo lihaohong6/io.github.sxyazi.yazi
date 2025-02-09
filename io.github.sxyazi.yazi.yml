@@ -35,8 +35,8 @@ modules:
       - /share/git-gui
     sources:
       - type: archive
-        url: https://www.kernel.org/pub/software/scm/git/git-2.47.1.tar.xz
-        sha256: f3d8f9bb23ae392374e91cd9d395970dabc5b9c5ee72f39884613cd84a6ed310
+        url: https://www.kernel.org/pub/software/scm/git/git-2.48.1.tar.xz
+        sha256: 1c5d545f5dc1eb51e95d2c50d98fdf88b1a36ba1fa30e9ae5d5385c6024f82ad
         x-checker-data:
           type: anitya
           project-id: 5350
@@ -95,8 +95,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/junegunn/fzf.git
-        tag: v0.57.0
-        commit: 0476a65fca287a1cd17ae3cbdfd8155eb0fb40ad
+        tag: v0.59.0
+        commit: bbe1721a1883426f639c1efe6afef1d3e6c25181
         x-checker-data:
           type: anitya
           project-id: 15856
@@ -179,8 +179,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/1player/host-spawn.git
-        tag: v1.6.0
-        commit: e150d2cf98d93e08db9fba7a87cabc51a9c9e34a
+        tag: v1.6.1
+        commit: db1173ae2ef04beca8961a35c225117498263e23
         x-checker-data:
           type: anitya
           project-id: 270202
@@ -224,8 +224,8 @@ modules:
       - -DENABLE_BOOST=OFF
     sources:
       - type: archive
-        url: https://poppler.freedesktop.org/poppler-24.12.0.tar.xz
-        sha256: 1cf374c3146f3f685d9257701bf0c2866c61d6c202c14d1f5c01a1f3a089028a
+        url: https://poppler.freedesktop.org/poppler-25.02.0.tar.xz
+        sha256: 21234cb2a9647d73c752ce4031e65a79d11a511a835f2798284c2497b8701dee
         x-checker-data:
           type: anitya
           project-id: 3686
@@ -250,7 +250,8 @@ modules:
       # The icon specified in the upstream dot desktop file does not play nicely with Flatpak.
       - desktop-file-edit assets/yazi.desktop --set-key=Icon --set-value="${FLATPAK_ID}"
       # Run the script to disable nerd fonts before launching Yazi.
-      - desktop-file-edit assets/yazi.desktop --set-key=Exec --set-value="yazi-wrapper.sh %u"
+      - desktop-file-edit assets/yazi.desktop --set-key=Exec --set-value="yazi-wrapper.sh
+        %u"
       - install -Dm00644 theme-no-nerd-fonts.toml ${FLATPAK_DEST}/share/theme-no-nerd-fonts.toml
       - install -Dm00744 yazi-wrapper.sh ${FLATPAK_DEST}/bin/yazi-wrapper.sh
       - install -Dm00644 assets/yazi.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
@@ -258,16 +259,16 @@ modules:
     sources:
       - type: git
         url: https://github.com/sxyazi/yazi.git
-        tag: v0.4.2
-        commit: 5cfcab305ef0a02771b3bd651ed343e436fc7f7e
+        tag: v25.2.7
+        commit: 17ff1e8812304d52aab56eb5dd6a220578a0dd74
         x-checker-data:
           type: anitya
           project-id: 370571
           stable-only: true
           tag-template: v$version
       - type: file
-        url: https://raw.githubusercontent.com/yazi-rs/assets/3992767b696ce4f9e77e5c39cb2af5d646f637ab/flatpak.xml
-        sha256: 57aeac2f15ca6c2f3bd19a16b5b81c6e6dcafb341556834cff950cd216ba575e
+        url: https://raw.githubusercontent.com/yazi-rs/assets/17de72dca08189cc0d102684f07be54a376564df/flatpak.xml
+        sha256: 1385b78c146bef179931aa50390526692af74b375027330268c73d8b91d06d41
       - cargo-sources-yazi.json
       - type: file
         path: theme-no-nerd-fonts.toml
