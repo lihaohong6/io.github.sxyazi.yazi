@@ -28,15 +28,15 @@
   type: archive
   url: https://proxy.golang.org/github.com/rivo/uniseg/@v/v0.4.7.zip
 - dest: vendor/golang.org/x/sys
-  sha256: 1d759c017d09328a4dacdd4a1a0170cf21641995c6e3ca1f96213369d73c6846
+  sha256: f5214bfec98f00e5432da68bbece03e98600fa41594ed026556cbde8fcb6f7c9
   strip-components: 3
   type: archive
-  url: https://proxy.golang.org/golang.org/x/sys/@v/v0.29.0.zip
+  url: https://proxy.golang.org/golang.org/x/sys/@v/v0.30.0.zip
 - dest: vendor/golang.org/x/term
-  sha256: ede5a49eac0946d10051703fa19f9f05c4cac3a217e55b7313e24b6c15ade914
+  sha256: 9d92c583d222113ac653848b3319ff559d2dba92f8232baff03d08fc9c0b8619
   strip-components: 3
   type: archive
-  url: https://proxy.golang.org/golang.org/x/term/@v/v0.28.0.zip
+  url: https://proxy.golang.org/golang.org/x/term/@v/v0.29.0.zip
 - dest: vendor/github.com/gdamore/encoding
   sha256: e584303c743306ae55be21a5703900d0628aa2ef840ce49d5f0bbf7c51379e33
   strip-components: 3
