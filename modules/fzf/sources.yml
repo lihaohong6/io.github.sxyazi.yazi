@@ -3,10 +3,10 @@
   path: modules/fzf/modules.txt
   type: file
 - dest: vendor/github.com/charlievieth/fastwalk
-  sha256: cc42af1ec97ee20d6cd0172c3fa669fd42236327036a39fb864b6aa08225af76
+  sha256: 6c657b20f8b99683e4676b95149895d3f480c27d20c2c3358708cd406340c43d
   strip-components: 3
   type: archive
-  url: https://proxy.golang.org/github.com/charlievieth/fastwalk/@v/v1.0.9.zip
+  url: https://proxy.golang.org/github.com/charlievieth/fastwalk/@v/v1.0.10.zip
 - dest: vendor/github.com/gdamore/tcell/v2
   sha256: 28ec9a195c369405a264531593e1d5c394ba3e1926792a2ba3069e17ffe7b7ac
   strip-components: 4
