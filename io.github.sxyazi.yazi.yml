@@ -167,6 +167,26 @@ modules:
           stable-only: true
           tag-template: v$version
       - modules/zoxide/cargo-sources.json
+  # For svg previews
+  - name: resvg
+    buildsystem: simple
+    build-options:
+      env:
+        - CARGO_HOME=/run/build/resvg/cargo
+    build-commands:
+      - cargo --offline fetch --manifest-path Cargo.toml
+      - cargo --offline build --release
+      - install -Dm00755 target/release/resvg /app/bin/resvg
+    sources:
+      - type: git
+        url: https://github.com/linebender/resvg.git
+        tag: 0.45.0
+        x-checker-data:
+          type: anitya
+          project-id: 377646
+          stable-only: true
+          tag-template: v$version
+      - modules/resvg/cargo-sources.json
   # For spawning processes outside the flatpak sandbox
   - name: host-spawn
     buildsystem: simple
@@ -267,8 +287,8 @@ modules:
           stable-only: true
           tag-template: v$version
       - type: file
-        url: https://raw.githubusercontent.com/yazi-rs/assets/912912302433a613bb63458fd48d3695ae961334/flatpak.xml
-        sha256: a6df8d74117678eb5e5072ccda073406a9a846676ec06ee226930a9edb0d8b0c
+        url: https://raw.githubusercontent.com/yazi-rs/assets/aad3e39fab6567bfed83e2725eca62ad11bd01e0/flatpak.xml
+        sha256: f16a24555eb6ed22816d4b6eea0e6044db2dcdbdeff3c90a6bb336313cf2711c
       - cargo-sources-yazi.json
       - type: file
         path: theme-no-nerd-fonts.toml

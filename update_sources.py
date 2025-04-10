@@ -62,7 +62,7 @@ def get_library_path(library_name: str) -> Path:
 def cargo_main():
     ensure_flatpak_cargo_generator_exists()
     yaml_file = get_yaml_file_as_text()
-    for library in ("sxyazi/yazi", "ajeetdsouza/zoxide", "BurntSushi/ripgrep", "sharkdp/fd"):
+    for library in ("sxyazi/yazi", "ajeetdsouza/zoxide", "BurntSushi/ripgrep", "sharkdp/fd", "linebender/resvg"):
         tag = get_tag(yaml_file, library)
         library_name = library.split('/')[-1]
         if library_name == "yazi":
