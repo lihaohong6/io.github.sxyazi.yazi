@@ -35,8 +35,8 @@ modules:
       - /share/git-gui
     sources:
       - type: archive
-        url: https://www.kernel.org/pub/software/scm/git/git-2.49.0.tar.xz
-        sha256: 618190cf590b7e9f6c11f91f23b1d267cd98c3ab33b850416d8758f8b5a85628
+        url: https://www.kernel.org/pub/software/scm/git/git-2.50.0.tar.xz
+        sha256: dff3c000e400ace3a63b8a6f8b3b76b88ecfdffd4504a04aba4248372cdec045
         x-checker-data:
           type: anitya
           project-id: 5350
@@ -52,8 +52,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/stedolan/jq
-        tag: jq-1.7.1
-        commit: 71c2ab509a8628dbbad4bc7b3f98a64aa90d3297
+        tag: jq-1.8.0
+        commit: d23a7b9db932be706fecf5f4c9711fd4214bb64e
         x-checker-data:
           type: anitya
           project-id: 13252
@@ -95,8 +95,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/junegunn/fzf.git
-        tag: v0.61.1
-        commit: 93cb3758b5f08a6dbf30c6e3d2e1de9b0be52a63
+        tag: v0.62.0
+        commit: d226d841a1f2b849b7e3efab2a44ecbb3e61a5a5
         x-checker-data:
           type: anitya
           project-id: 15856
@@ -159,8 +159,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ajeetdsouza/zoxide.git
-        tag: v0.9.7
-        commit: d74bce3b7418ed965f5056297db8bb081a29121c
+        tag: v0.9.8
+        commit: 859268aec873465b6707f73001003a76adcafabd
         x-checker-data:
           type: anitya
           project-id: 98400
@@ -180,12 +180,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/linebender/resvg.git
-        tag: 0.45.0
+        tag: v0.45.1
         x-checker-data:
           type: anitya
           project-id: 377646
           stable-only: true
           tag-template: v$version
+        commit: 1b6c2fddbcbeffa8135df4323b02aaae84890907
       - modules/resvg/cargo-sources.json
   # For spawning processes outside the flatpak sandbox
   - name: host-spawn
@@ -244,8 +245,8 @@ modules:
       - -DENABLE_BOOST=OFF
     sources:
       - type: archive
-        url: https://poppler.freedesktop.org/poppler-25.04.0.tar.xz
-        sha256: b010c596dce127fba88532fd2f1043e55ea30601767952d0f2c0a80e7dc0da3d
+        url: https://poppler.freedesktop.org/poppler-25.06.0.tar.xz
+        sha256: 8199532d38984fab46dbd0020ec9c40f20e928e33e9b4cc6043572603a821d83
         x-checker-data:
           type: anitya
           project-id: 3686
@@ -279,8 +280,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sxyazi/yazi.git
-        tag: v25.4.8
-        commit: 99ea3b74c4260a724b43af812df0f68ef59395b7
+        tag: v25.5.31
+        commit: b65a88075a824e4304dca5428ba05de1404fa635
         x-checker-data:
           type: anitya
           project-id: 370571
